@@ -93,7 +93,7 @@ app.post("/login", async (req, res) => {
 
 app.listen(port || 3000, () => {
   // callback me arg mat do, aur fallback port rakh lo
-  console.log(`Server running at http://localhost:${port || 3000}`);
+  // console.log(`Server running at http://localhost:${port || 3000}`);
 });
 
 
