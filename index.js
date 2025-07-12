@@ -4,6 +4,12 @@ const cors = require("cors");
 const dotenv = require("dotenv").config();
 const app = express();
 const EmployeeModel = require("./models/Employee");
+
+
+
+
+
+
 const port = process.env.PORT;
 const MDB = process.env.MONGODB_URI;
 const DBNAME = '/employees';
@@ -11,6 +17,13 @@ const DBNAME = '/employees';
 
 
 
+app.use(
+  cors({
+    origin: "https://fullstackloginapp.netlify.app", // frontend ka URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 
 
